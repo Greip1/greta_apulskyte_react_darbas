@@ -4,9 +4,9 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AddPage from './pages/AddPage';
 import HomePage from './pages/HomePage';
-import NotFoundPage from './pages/NotFoundPage';
+import NotLoggedPage from './pages/NotLoggedPage';
 import Header from './components/Header/Header';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         </ProtectedRoute>
 
         <Route path={'*'}>
-          <NotFoundPage />
+          <NotLoggedPage />
         </Route>
       </Switch>
     </div>
