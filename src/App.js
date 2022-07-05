@@ -1,10 +1,10 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import AddPage from './pages/AddPage';
-import HomePage from './pages/HomePage';
-import NotLoggedPage from './pages/NotLoggedPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
+import AddPage from './pages/AddPage/AddPage';
+import HomePage from './pages/HomePage/HomePage';
+import NotLoggedPage from './pages/NotLoggedPage/NotLoggedPage';
 import Header from './components/Header/Header';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 

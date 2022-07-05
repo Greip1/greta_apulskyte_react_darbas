@@ -1,0 +1,9 @@
+.nav-link {
+    display: inline-block;
+    padding: 1em 1.7em;
+    background-color: rgb(155, 85, 178);
+  }
+  .nav-link.active {
+    background-color: rgb(175, 171, 171);
+    color: snow;
+  }
