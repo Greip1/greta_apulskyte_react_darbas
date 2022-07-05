@@ -9,6 +9,7 @@ function Header() {
   return (
     <header className={css.header}>
       <nav>
+        <img src="logo2.jpeg" alt="" />
         {isUserLoggedIn && (
           <NavLink className="nav-link" to="/home">
             Home

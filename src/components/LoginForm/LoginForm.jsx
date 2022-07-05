@@ -50,11 +50,12 @@ function LoginForm(props) {
 
   //
   return (
-    <form className={css.form} onSubmit={formik.handleSubmit}>
-      <h1 className={css.title}>Please Login</h1>
+    <div className="formContainer">
+      <form className={css.form} onSubmit={formik.handleSubmit}>
+        <h1 className={css.title}>Please Login</h1>
 
-      <label className={css.label}>
-        <span className={css.span}>Email</span>
+        <label className={css.label}>Email </label>
+        <br />
         <input
           type="email"
           onChange={formik.handleChange}
@@ -66,10 +67,10 @@ function LoginForm(props) {
           name="email"
           placeholder="Your email"
         />
-      </label>
-      <p className={css.errorMsg}>{formik.errors.email}</p>
-      <label className={css.label}>
-        <span className={css.span}>Password</span>
+
+        <p className={css.errorMsg}>{formik.errors.email}</p>
+        <label className={css.label}>Password</label>
+        <br />
         <input
           type="password"
           onChange={formik.handleChange}
@@ -81,17 +82,17 @@ function LoginForm(props) {
           name="password"
           placeholder="Your password"
         />
-      </label>
-      {/* <input className={css.input} type='email' />
-      <input className={css.input} type='password' /> */}
-      <p className={css.errorMsg}>{formik.errors.password}</p>
-      {error && <p className={css.errorMsg}>{error}</p>}
 
-      <p className={css.forgot_pass}>Forgot password?</p>
-      <button className={css.btn} type="submit">
-        Login
-      </button>
-    </form>
+        {/* <input className={css.input} type='email' />
+      <input className={css.input} type='password' /> */}
+        <p className={css.errorMsg}>{formik.errors.password}</p>
+        {error && <p className={css.errorMsg}>{error}</p>}
+
+        <button className={css.btn} type="submit">
+          Login
+        </button>
+      </form>
+    </div>
   );
 }
 

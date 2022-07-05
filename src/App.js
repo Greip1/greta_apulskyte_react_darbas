@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import NotLoggedPage from './pages/NotLoggedPage/NotLoggedPage';
 import Header from './components/Header/Header';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <NotLoggedPage />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

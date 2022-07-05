@@ -68,36 +68,34 @@ function AddForm() {
           {/*  */}
           <p className={`${css.padding} ${css.errorMsg}`}>{error ? error : ''}</p>
           {/*  */}
-          <label className={css.label}>
-            <p className={css.title}>Title</p>
-            <input
-              type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.title}
-              className={
-                formik.touched.title && formik.errors.title ? css.errorInput : css.input
-              }
-              name="title"
-            />
-          </label>
+          <label className={css.label}>Title </label>
+          <br />
+          <input
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.title}
+            className={
+              formik.touched.title && formik.errors.title ? css.errorInput : css.input
+            }
+            name="title"
+          />{' '}
+          <br />
           <p className={css.errorMsg}>{formik.errors.title}</p>
-          <label className={css.label}>
-            <p className={css.title}>Description</p>
-            <textarea
-              type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.description}
-              className={
-                formik.touched.description && formik.errors.description
-                  ? css.errorInput
-                  : css.input
-              }
-              name="description"
-            />
-          </label>
-
+          <label className={css.label}> Description</label>
+          <br />
+          <textarea
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.description}
+            className={
+              formik.touched.description && formik.errors.description
+                ? css.errorInput
+                : css.input
+            }
+            name="description"
+          />
           <p className={css.errorMsg}>{formik.errors.description}</p>
           <button className={css.btn} type="submit">
             Add

@@ -2,7 +2,7 @@ import AddForm from '../../components/AddForm/AddForm';
 
 function AddPage() {
   return (
-    <div className="container">
+    <div className="formContainer">
       <AddForm />
     </div>
   );

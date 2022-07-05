@@ -7,7 +7,9 @@
     border-color: tomato;
     background-color: rgb(255, 208, 199);
   }
-  
+  .errorInput::placeholder{
+    color: rgb(225, 9, 9);
+  }
   .successMessage {
     background-color: rgb(196, 160, 200);
     border-radius: 10px;

@@ -2,7 +2,7 @@ import HomeCardList from '../../components/HomeCards/HomeCardList';
 
 function HomePage() {
   return (
-    <div>
+    <div className="postContainer">
       <HomeCardList />
     </div>
   );
