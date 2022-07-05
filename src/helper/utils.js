@@ -31,3 +31,7 @@ export async function myFetchAuth(url, token) {
 
 export const baseUrl = 'https://autumn-delicate-wilderness.glitch.me/v1/auth';
 if (!baseUrl) throw new Error('baseUrl nerastas');
+
+export const baseUrlSkills =
+  'https://autumn-delicate-wilderness.glitch.me/v1/content/skills';
+if (!baseUrl) throw new Error('baseUrl nerastas');

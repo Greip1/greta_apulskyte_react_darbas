@@ -1,23 +1,24 @@
 GET https://autumn-delicate-wilderness.glitch.me/v1/content/skills 
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjU2LCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjU2OTY5NTg2fQ.u2QXbQ2vW_N-lgX6aTJ_fhvkw6n4N4UbYEq20Iqv7H0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODUwLCJlbWFpbCI6InRlc3RAdGVzdDIuY29tIiwiaWF0IjoxNjU3MDIzMzIxfQ.HAOXd6EGwDrUp65ICIxgi0OxmVwOpCBg-L8vcbYBK0s
 
 ###
 
 POST https://autumn-delicate-wilderness.glitch.me/v1/content/skills 
-Content-Type: application/json Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODAyLCJlbWFpbCI6InRlc3RAZW1haWwubHQiLCJpYXQiOjE2NTY5NjQxNDJ9.GevfPx9pIiXyMaB7H5VkzbjbKXIHLNq-4w6UjEQF2KU
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODUwLCJlbWFpbCI6InRlc3RAdGVzdDIuY29tIiwiaWF0IjoxNjU3MDIzMzIxfQ.HAOXd6EGwDrUp65ICIxgi0OxmVwOpCBg-L8vcbYBK0s
 
-{ "title": "Test", "description": "tets" }
+{ "title": "new title", "description": "this is new post" }
 
 ###
 
 POST https://autumn-delicate-wilderness.glitch.me/v1/auth/register 
 Content-Type: application/json
 
-{ "email": "test@test.com", "password": "123456" }
+{ "email": "test@test2.com", "password": "123456" }
 
 ###
 
 POST https://autumn-delicate-wilderness.glitch.me/v1/auth/login 
 Content-Type: application/json
 
-{ "email": "test@email.lt", "password": "123456" }
+{ "email": "test@test2.com", "password": "123456" }

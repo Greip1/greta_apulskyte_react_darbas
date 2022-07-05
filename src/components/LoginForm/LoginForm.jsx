@@ -13,10 +13,9 @@ const initValues = {
   password: '123456',
 };
 // -------------------------------
-function LoginForm() {
+function LoginForm(props) {
   //
   const { login } = useAuthCtx();
-  const history = useHistory();
   const [error, setError] = useState('');
 
   const formik = useFormik({
@@ -42,7 +41,8 @@ function LoginForm() {
         return;
       }
       login(fetchResult.token);
-      history.push('/home');
+      props.onSuccessLogin();
+      console.log('result ===', fetchResult);
     },
   });
   // console.log('formik.values ===', formik.values);
