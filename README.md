@@ -1,6 +1,6 @@
 # Gretos Apulskytes React Darbas
 
-<img src= src/logo1.png width="500"  />
+<img src="logo1.png" width="500"  />
 
 ## Paleidimas
 
