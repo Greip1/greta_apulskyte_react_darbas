@@ -1,11 +1,11 @@
 # Gretos Apulskytes React Darbas
 
-<img src="logo1.png" width="500"  />
+🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊
 
 ## Paleidimas
 
-`npm i`
-`npm start`
+`npm i`🚀
+`npm start`🚀
 
 App'as pasileidžia [http://localhost:3000](http://localhost:3000) jusų naršyklėje.
 
