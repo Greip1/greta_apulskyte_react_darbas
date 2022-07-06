@@ -1,0 +1,35 @@
+.card {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 15px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin: 10px 2px;
+  padding: 20px 2px;
+  max-width: 250px;
+}
+.title{
+    font-style: italic;
+}
+.line {
+    background-color: orange;
+    max-width: 80%;
+    height: 1px;
+    margin: 2px auto;
+
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+.link:hover{
+    background-color: #fff;
+    color: orange;
+    padding: 5px;
+    border-radius: 5px;
+}
+.addText{
+    font-style: italic;
+
+}

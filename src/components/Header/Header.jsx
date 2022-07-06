@@ -8,8 +8,11 @@ function Header() {
 
   return (
     <header className={css.header}>
-      <nav>
-        <img src="logo2.jpeg" alt="" />
+      <div className={css.img}>
+        <img className={css.logo} src="logo1.png" alt="Logo" />
+      </div>
+
+      <nav className={css.nav}>
         {isUserLoggedIn && (
           <NavLink className="nav-link" to="/home">
             Home

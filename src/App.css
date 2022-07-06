@@ -44,12 +44,17 @@ img {
     font-weight: bold;
     letter-spacing: 1px;
   }
+  button:hover {
+    transform: translatey(3px);
+    background-color:orange;
+
+  }
   input, textarea {
     margin: 20px;
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    width: 70%;
+    width: 80%;
   }
   label{
     margin: 20px;
@@ -69,13 +74,20 @@ font-weight: bold;
     padding: 20px;
     border-radius: 10px;
   }
-
+.formContainer button {
+margin: 15px auto;
+margin-left: 20px;
+}
   .postContainer{
     background-color: rgba(255, 255, 255, 0.63);
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
+  }
+  .center {
+    margin-top: 50px;
+    text-align: center;
   }
   h1 {
     text-align: center;

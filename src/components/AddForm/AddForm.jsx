@@ -23,10 +23,10 @@ function AddForm() {
   const formik = useFormik({
     initialValues: initValues,
     validationSchema: Yup.object({
-      title: Yup.string().min(5, 'Min 5 symbols').required('This field is required'),
+      title: Yup.string().min(5, 'Min 5 characters').required('This field is required'),
       description: Yup.string()
-        .min(5, 'Min 5 symbols')
-        .max(50)
+        .min(5, 'Min 5 characters')
+        .max(50, 'Max 50 characters')
         .required('This field is required'),
     }),
     onSubmit: async (values) => {
@@ -53,21 +53,19 @@ function AddForm() {
   return (
     <>
       {postCreated ? (
-        <div className={css.successMessage}>
-          <p>Post was successfully added!</p>
-          <Link className={css.navLink} to={'/home'}>
-            <button className={css.btn}>Back to all posts</button>
-          </Link>
-          {/* <Link className={css.navLink}  to={'/add'}>
-            <button className={css.btn}>Add another</button>
-          </Link> */}
-        </div>
+        <>
+          <h1 className={css.title}>Add skills</h1>
+          <div className={css.successMessage}>
+            <p>Post was successfully added!</p>
+            <Link className={css.navLink} to={'/home'}>
+              <button className={css.btn}>Back to all posts</button>
+            </Link>
+          </div>
+        </>
       ) : (
         <form className={css.form} onSubmit={formik.handleSubmit}>
           <h1 className={css.title}>Add skills</h1>
-          {/*  */}
           <p className={`${css.padding} ${css.errorMsg}`}>{error ? error : ''}</p>
-          {/*  */}
           <label className={css.label}>Title </label>
           <br />
           <input
@@ -79,7 +77,7 @@ function AddForm() {
               formik.touched.title && formik.errors.title ? css.errorInput : css.input
             }
             name="title"
-          />{' '}
+          />
           <br />
           <p className={css.errorMsg}>{formik.errors.title}</p>
           <label className={css.label}> Description</label>
@@ -97,9 +95,17 @@ function AddForm() {
             name="description"
           />
           <p className={css.errorMsg}>{formik.errors.description}</p>
-          <button className={css.btn} type="submit">
-            Add
-          </button>
+          <div className={css.grid}>
+            <button className={css.btn} type="submit">
+              Add
+            </button>
+            <button>
+              {' '}
+              <Link className={css.link} to={'/home'}>
+                Go back
+              </Link>
+            </button>
+          </div>
         </form>
       )}
     </>

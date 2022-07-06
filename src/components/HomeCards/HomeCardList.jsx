@@ -30,15 +30,23 @@ function HomeCardList() {
   return (
     <div className={css.cardList}>
       <h1>Skills list:</h1>
-      <div className={css.card_container}>
+      <div className={css.gridContainer}>
         {post.length > 0 ? (
           post.map((skObj) => <HomeCard key={skObj.id} {...skObj} />)
         ) : (
           <>
-            <h2>There are no posts...</h2>
-            <h3>
-              Add new post <Link to={'/add'}>HERE</Link>
-            </h3>
+            <div>
+              <h2>There are no available posts...</h2>
+              <br />
+
+              <h3 className={css.addText}>Want to add new post?</h3>
+              <h3>
+                Do it{' '}
+                <Link className={css.link} to={'/add'}>
+                  HERE
+                </Link>
+              </h3>
+            </div>
           </>
         )}
       </div>
