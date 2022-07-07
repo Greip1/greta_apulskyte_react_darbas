@@ -13,8 +13,6 @@ const initValues = {
   repPassword: '',
 };
 function RegisterForm() {
-  // =========================================
-
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   const formik = useFormik({
@@ -38,10 +36,8 @@ function RegisterForm() {
         password: values.password,
       };
       const fetchResult = await myFetch(`${baseUrl}/register`, 'POST', newReg);
-      console.log('fetchResulRegister ===', fetchResult);
       if (fetchResult.changes === 1) {
         setRegistrationSuccess(true);
-        console.log('yaay post reg pavyko');
       }
     },
   });

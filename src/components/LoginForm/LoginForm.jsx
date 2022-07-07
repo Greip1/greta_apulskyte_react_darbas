@@ -7,14 +7,11 @@ import { useAuthCtx } from '../../store/authContext';
 import { useHistory } from 'react-router-dom';
 import { baseUrl, myFetch } from '../../helper/utils';
 
-// -----------------------------
 const initValues = {
-  email: 'ann@ann.com',
-  password: '123456',
+  email: '',
+  password: '',
 };
-// -------------------------------
 function LoginForm(props) {
-  //
   const { login } = useAuthCtx();
   const [error, setError] = useState('');
 
@@ -30,25 +27,18 @@ function LoginForm(props) {
         .required('This field is required'),
     }),
     onSubmit: async (values) => {
-      // console.log(baseUrl);
-      // console.log('values ===', values);
       setError('');
       const fetchResult = await myFetch(`${baseUrl}/login`, 'POST', values);
 
       if (fetchResult.err) {
-        console.log('error in fetch===', fetchResult.err);
         setError(fetchResult.err);
         return;
       }
       login(fetchResult.token);
       props.onSuccessLogin();
-      console.log('result ===', fetchResult);
     },
   });
-  // console.log('formik.values ===', formik.values);
-  console.log('errorr in fetching', error);
 
-  //
   return (
     <div className="formContainer">
       <form className={css.form} onSubmit={formik.handleSubmit}>
@@ -82,9 +72,6 @@ function LoginForm(props) {
           name="password"
           placeholder="Your password"
         />
-
-        {/* <input className={css.input} type='email' />
-      <input className={css.input} type='password' /> */}
         <p className={css.errorMsg}>{formik.errors.password}</p>
         {error && <p className={css.errorMsg}>{error}</p>}
 

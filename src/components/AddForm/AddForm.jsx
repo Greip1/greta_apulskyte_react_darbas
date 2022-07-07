@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useAuthCtx } from '../../store/authContext';
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { baseUrlSkills, myFetch, myFetchAuth } from '../../helper/utils';
+import { baseUrlSkills } from '../../helper/utils';
 
 // -----------------------------
 const initValues = {
@@ -43,7 +43,6 @@ function AddForm() {
         body: JSON.stringify(newPost),
       });
       const result = await resp.json();
-      console.log(result);
       if (result.msg) {
         setPostCreated(true);
       }

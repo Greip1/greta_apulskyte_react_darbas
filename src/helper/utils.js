@@ -8,9 +8,7 @@ export async function myFetch(url, method = 'GET', data = null) {
     const resp = await fetch(url, options);
     const dataInJs = await resp.json();
     return dataInJs;
-  } catch (error) {
-    console.log('myFetch error ===', error);
-  }
+  } catch (error) {}
 }
 
 export async function myFetchAuth(url, token) {
@@ -24,9 +22,7 @@ export async function myFetchAuth(url, token) {
     const resp = await fetch(url, options);
     const dataInJs = await resp.json();
     return dataInJs;
-  } catch (error) {
-    console.log('myFetchAuth error ===', error);
-  }
+  } catch (error) {}
 }
 
 export const baseUrl = 'https://autumn-delicate-wilderness.glitch.me/v1/auth';

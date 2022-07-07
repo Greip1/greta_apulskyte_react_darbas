@@ -3,7 +3,6 @@ import { useAuthCtx } from '../../store/authContext';
 import css from './Header.module.css';
 
 function Header() {
-  // useContext ir pagal isLoggedin rodom arba nerodom
   const { isUserLoggedIn, logout } = useAuthCtx();
 
   return (
@@ -29,8 +28,6 @@ function Header() {
             Register
           </NavLink>
         )}
-
-        {/*  */}
         {!isUserLoggedIn && (
           <NavLink className="nav-link" to="/login">
             Login
