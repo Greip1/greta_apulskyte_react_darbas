@@ -1,0 +1,24 @@
+GET https://autumn-delicate-wilderness.glitch.me/v1/content/skills 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODUwLCJlbWFpbCI6InRlc3RAdGVzdDIuY29tIiwiaWF0IjoxNjU3MDIzMzIxfQ.HAOXd6EGwDrUp65ICIxgi0OxmVwOpCBg-L8vcbYBK0s
+
+###
+
+POST https://autumn-delicate-wilderness.glitch.me/v1/content/skills 
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODUwLCJlbWFpbCI6InRlc3RAdGVzdDIuY29tIiwiaWF0IjoxNjU3MDIzMzIxfQ.HAOXd6EGwDrUp65ICIxgi0OxmVwOpCBg-L8vcbYBK0s
+
+{ "title": "new title", "description": "this is new post" }
+
+###
+
+POST https://autumn-delicate-wilderness.glitch.me/v1/auth/register 
+Content-Type: application/json
+
+{ "email": "test@test2.com", "password": "123456" }
+
+###
+
+POST https://autumn-delicate-wilderness.glitch.me/v1/auth/login 
+Content-Type: application/json
+
+{ "email": "test@test2.com", "password": "123456" }

@@ -1,5 +1,5 @@
 import { Route } from 'react-router';
-import NotLoggedPage from '../../pages/NotLoggedPage';
+import NotLoggedPage from '../../pages/NotLoggedPage/NotLoggedPage';
 import { useAuthCtx } from '../../store/authContext';
 
 function ProtectedRoute(props) {

@@ -1,11 +1,16 @@
-.header {
+.nav {
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(85, 113, 178);
-}
+  background-color: rgb(255, 255, 255);
 
-.navLink {
-  display: inline-block;
-  padding: 1em 1.7em;
-  background-color: rgb(85, 113, 178);
+}
+.header{
+  background-color: #fff
+  ;
+  height: 50px;
+}
+.logo
+{margin-left: 20px;
+  height: 51px;
+  float: left;
 }

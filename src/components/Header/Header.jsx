@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { useAuthCtx } from '../../store/authContext';
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import css from './Header.module.css';
 
 function Header() {
@@ -9,33 +8,37 @@ function Header() {
 
   return (
     <header className={css.header}>
-      <nav>
+      <div className={css.img}>
+        <img className={css.logo} src="logo1.png" alt="Logo" />
+      </div>
+
+      <nav className={css.nav}>
         {isUserLoggedIn && (
-          <NavLink className={css.navLink} to="/home">
+          <NavLink className="nav-link" to="/home">
             Home
           </NavLink>
         )}
         {isUserLoggedIn && (
-          <NavLink className={css.navLink} to="/add">
+          <NavLink className="nav-link" to="/add">
             Add
           </NavLink>
         )}
 
         {!isUserLoggedIn && (
-          <NavLink className={css.navLink} to="/register">
+          <NavLink className="nav-link" to="/register">
             Register
           </NavLink>
         )}
 
         {/*  */}
         {!isUserLoggedIn && (
-          <NavLink className={css.navLink} to="/login">
+          <NavLink className="nav-link" to="/login">
             Login
           </NavLink>
         )}
 
         {isUserLoggedIn && (
-          <NavLink onClick={logout} className={css.navLink} to="/login">
+          <NavLink onClick={logout} className="nav-link" to="/login">
             Logout
           </NavLink>
         )}
