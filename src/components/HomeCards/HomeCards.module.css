@@ -22,6 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
+    margin: 20px;
 }
 .link:hover{
     background-color: #fff;
@@ -32,4 +33,21 @@
 .addText{
     font-style: italic;
 
+}
+
+@media screen and (max-width: 760px){
+
+    .gridContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    } 
+}
+
+@media screen and (max-width: 450px) {
+    .gridContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    } 
 }

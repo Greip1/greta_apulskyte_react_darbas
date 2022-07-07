@@ -4,6 +4,7 @@
 :root {
   --main-color: #f1ba2f;
 }
+
 body {
   margin: 0;
   height: 100vh;
@@ -91,4 +92,11 @@ margin-left: 20px;
   }
   h1 {
     text-align: center;
+  }
+
+  @media screen and (min-width: 1450px) {
+
+.App {
+  width: 1200px;
+margin: 0 auto;}
   }

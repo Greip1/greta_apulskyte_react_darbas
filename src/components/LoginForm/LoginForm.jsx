@@ -51,14 +51,13 @@ function LoginForm(props) {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
-          className={
-            formik.touched.email && formik.errors.email ? css.errorInput : css.input
-          }
+          className={formik.touched.email && formik.errors.email ? css.errorInput : ''}
           name="email"
           placeholder="Your email"
         />
-
-        <p className={css.errorMsg}>{formik.errors.email}</p>
+        {formik.touched.email && formik.errors.email && (
+          <p className={css.errorMsg}>{formik.errors.email}</p>
+        )}
         <label className={css.label}>Password</label>
         <br />
         <input
@@ -67,14 +66,14 @@ function LoginForm(props) {
           onBlur={formik.handleBlur}
           value={formik.values.password}
           className={
-            formik.touched.password && formik.errors.password ? css.errorInput : css.input
+            formik.touched.password && formik.errors.password ? css.errorInput : ''
           }
           name="password"
           placeholder="Your password"
         />
-        <p className={css.errorMsg}>{formik.errors.password}</p>
-        {error && <p className={css.errorMsg}>{error}</p>}
-
+        {formik.touched.password && formik.errors.password && (
+          <p className={css.errorMsg}>{formik.errors.password}</p>
+        )}
         <button className={css.btn} type="submit">
           Login
         </button>
